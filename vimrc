@@ -60,13 +60,26 @@ Plugin 'jalvesaq/Nvim-R'
 Plugin 'Valloric/YouCompleteMe'
 "Plugin 'vim-scripts/Conque-GDB'
 Plugin 'rhysd/clever-f.vim'
+Plugin 'slimux'
 
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = ","
+let g:mapleader = ","
 
 " Nvim R
 "
 let g:R_tmux_split = 1
 let maplocalleader = ','
 let R_assign = 0
+
+" Slimux
+map <leader>s :SlimuxREPLSendLine<CR>
+vmap <leader>s :SlimuxREPLSendSelection<CR>
+map <leader>b :SlimuxREPLSendBuffer<CR>
+map <leader>a :SlimuxShellLast<CR>
+map <leader>k :SlimuxSendKeysLast<CR>
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -106,11 +119,6 @@ filetype indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
-
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
-let mapleader = ","
-let g:mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
