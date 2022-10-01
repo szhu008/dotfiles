@@ -39,52 +39,6 @@
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vundle
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-"Plugin 'vim-scripts/Conque-Shell'
-Plugin 'mileszs/ack.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'jalvesaq/Nvim-R'
-Plugin 'Valloric/YouCompleteMe'
-"Plugin 'vim-scripts/Conque-GDB'
-Plugin 'rhysd/clever-f.vim'
-Plugin 'slimux'
-
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
-let mapleader = ","
-let g:mapleader = ","
-
-" Nvim R
-"
-let g:R_tmux_split = 1
-let maplocalleader = ','
-let R_assign = 0
-
-" Slimux
-map <leader>s :SlimuxREPLSendLine<CR>
-vmap <leader>s :SlimuxREPLSendSelection<CR>
-map <leader>b :SlimuxREPLSendBuffer<CR>
-map <leader>a :SlimuxShellLast<CR>
-map <leader>k :SlimuxSendKeysLast<CR>
-
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
 " Brief help
@@ -459,4 +413,4 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
-
+set autochdir
